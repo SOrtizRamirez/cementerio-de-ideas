@@ -7,9 +7,6 @@ body {
     margin: 0;
     color: #eeeeee; 
     background-color: #000000; 
-    
-
-
     position: relative; 
     overflow: hidden; 
 
@@ -101,7 +98,8 @@ p {
 }
 
 #start-button,
-#login-form button[type="submit"] {
+#login-form button,
+#register-form button {
     background-color: #00ADB5; 
     color: #FFFFFF;
     padding: 16px 35px;
@@ -116,7 +114,7 @@ p {
 }
 
 #start-button:hover,
-#login-form button[type="submit"]:hover {
+#login-form button:hover {
     background-color: #008C9E; 
     transform: translateY(-3px); 
     box-shadow: 0 10px 20px rgba(0, 173, 181, 0.3); 
@@ -135,8 +133,8 @@ p {
     font-size: 1.1em;
 }
 
-.input-group input[type="text"],
-.input-group input[type="password"] {
+.input-group input,
+.input-group input {
     width: calc(100% - 24px);
     padding: 14px;
     background-color: #4A515A;
@@ -148,8 +146,8 @@ p {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.input-group input[type="text"]:focus,
-.input-group input[type="password"]:focus {
+.input-group input:focus,
+.input-group input:focus {
     border-color: #00ADB5; 
     box-shadow: 0 0 10px rgba(0, 173, 181, 0.4); 
 }
