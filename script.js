@@ -66,8 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let ladoDerecho = true;
 
   addGraveButton.addEventListener("click", () => {
-  graveForm.classList.toggle("hide");
-});
+    graveForm.classList.toggle("hide");
+  });
 
   graveForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -138,3 +138,32 @@ const getUserById = async (id) => {
     console.error(error);
   }
 };
+
+
+const floresEtapas = [
+  "./img/flowers1", // ramas
+  "./img/flowers2", // brotes
+  "./img/flowers3", // florecidas
+];
+
+function florecer(button) {
+  const lapida = button.closest(".lapida");
+  const flores = lapida.querySelector(".flores");
+  let etapa = 0;
+
+  flores.style.opacity = 0;
+
+  const florecerPaso = () => {
+    if (etapa >= floresEtapas.length) return;
+    flores.src = floresEtapas[etapa];
+    flores.style.opacity = 1;
+
+    setTimeout(() => {
+      flores.style.opacity = 0;
+      etapa++;
+      setTimeout(florecerPaso, 500); // Espera y pasa a la siguiente etapa
+    }, 1000); // Tiempo para ver la imagen actual
+  };
+
+  florecerPaso();
+}
