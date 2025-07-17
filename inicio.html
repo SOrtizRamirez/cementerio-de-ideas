@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style2.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style2.css" />
     <title>Inicio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <button class="add-grave">Crear lápida</button>
     <div class="container-de-todo">
-
-        <main class="main-content-derecha">
-
-        </main>
-        <section class="river">
-            <button id="avanzar"></button>
-            <button id="devolverse"></button>
-        </section>
-        <main class="main-content-izquierda">
-
-        </main>
+      <main class="main-content-derecha"></main>
+      <section class="river">
+        <button id="avanzar"></button>
+        <button id="devolverse"></button>
+      </section>
+      <main class="main-content-izquierda"></main>
     </div>
 
-    <button class="add-grave">Crear lápida</button>
-
-    <form id="grave-form" style="display: none;">
-        <label for="grave-text">Mensaje de la lápida:</label>
-        <input type="text" id="grave-text" required placeholder="Aquí yace...">
-        <button type="submit">Agregar</button>
+    <form id="grave-form" class="hide">
+      <label for="grave-text">Mensaje de la lápida:</label>
+      <input type="text" id="grave-text" required placeholder="Aquí yace..." />
+      <button type="submit">Agregar</button>
     </form>
-
-</body>
-<script src="./script.js"></script>
-
+  </body>
+  <script src="./script.js"></script>
 </html>
