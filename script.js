@@ -53,3 +53,47 @@ document.addEventListener('DOMContentLoaded', () => {
         loginScreen.classList.remove('hidden');
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const addGraveButton = document.querySelector(".add-grave");
+    const graveForm = document.getElementById("grave-form");
+    const graveTextInput = document.getElementById("grave-text");
+    const izquierda = document.querySelector(".main-content-izquierda");
+    const derecha = document.querySelector(".main-content-derecha");
+
+    let ladoDerecho = true;
+
+    // Mostrar el formulario
+    addGraveButton.addEventListener("click", () => {
+        graveForm.style.display = graveForm.style.display === "none" ? "block" : "none";
+    });
+
+    // Agregar lápida al enviar el formulario
+    graveForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const mensaje = graveTextInput.value.trim();
+        if (mensaje === "") return;
+
+        const lapida = document.createElement("div");
+        lapida.classList.add("lapida");
+
+        const texto = document.createElement("div");
+        texto.classList.add("lapida-texto");
+        texto.innerHTML = `<h3>R.I.P.</h3><p>${mensaje}</p>`;
+
+        lapida.appendChild(texto);
+
+        if (ladoDerecho) {
+            derecha.appendChild(lapida);
+        } else {
+            izquierda.appendChild(lapida);
+        }
+
+        ladoDerecho = !ladoDerecho;
+        graveForm.reset();
+        graveForm.style.display = "none";
+    });
+});
+
+

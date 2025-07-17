@@ -15,7 +15,7 @@ body {
 
 
 body.fondo-activo {
-    background-image: url('img/cementerio.png');
+    background-image: url('./img/login.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -39,7 +39,7 @@ body::before {
 }
 
 body.fondo-activo::before {
-    background-image: url('img/cementerio.png');
+    background-image: url('./img/login.gif');
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center center;
