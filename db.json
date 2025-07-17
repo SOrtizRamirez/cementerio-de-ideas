@@ -11,6 +11,32 @@
       "name": "brisbany",
       "email": "b@gmail.com",
       "password": "123"
+    },
+    {
+      "id": "1a5d",
+      "name": "manuela",
+      "email": "manuela@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "graves": [
+    {
+      "id": "7045",
+      "massage": "ideita",
+      "author": "bany",
+      "rights": "yes"
+    },
+    {
+      "id": "1d15",
+      "massage": "aaaaaa",
+      "author": "bany",
+      "rights": "yes"
+    },
+    {
+      "id": "ca84",
+      "massage": "popo",
+      "author": "qwe",
+      "rights": "yes"
     }
   ]
 }
